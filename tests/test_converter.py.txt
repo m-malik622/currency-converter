@@ -1,0 +1,15 @@
+import unittest
+from app.converter import get_exchange_rate
+
+class TestConverter(unittest.TestCase):
+
+    def test_get_exchange_rate(self):
+        # Mock the API response for testing
+        api_key = 'fake_api_key'
+        base_currency = 'USD'
+        target_currency = 'EUR'
+        rate = get_exchange_rate(api_key, base_currency, target_currency)
+        self.assertIsInstance(rate, float)
+
+if __name__ == '__main__':
+    unittest.main()

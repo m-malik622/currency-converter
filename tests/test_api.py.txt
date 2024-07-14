@@ -1,0 +1,14 @@
+import unittest
+from app.api import fetch_exchange_rates
+
+class TestAPI(unittest.TestCase):
+
+    def test_fetch_exchange_rates(self):
+        # Mock the API response for testing
+        api_key = 'fake_api_key'
+        base_currency = 'USD'
+        rates = fetch_exchange_rates(api_key, base_currency)
+        self.assertIn('rates', rates)
+
+if __name__ == '__main__':
+    unittest.main()
